@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proj.test.ModProdController">
+   <children>
+      <AnchorPane layoutX="8.0" layoutY="8.0" prefHeight="485.0" prefWidth="985.0" style="-fx-border-color: black; -fx-border-radius: 15;">
+         <children>
+            <Button fx:id="ModProdSearchButton" layoutX="910.0" layoutY="14.0" mnemonicParsing="false" onAction="#OnModProdSearchButtonClicked" text="Search" />
+            <Button fx:id="ModProdCancelButton" layoutX="910.0" layoutY="446.0" mnemonicParsing="false" onMouseClicked="#OnModProdCancelButtonClicked" text="Cancel" />
+            <Button fx:id="ModProdSaveButton" layoutX="851.0" layoutY="446.0" mnemonicParsing="false" onAction="#OnModProdSaveButtonClicked" text="Save" />
+            <Button fx:id="ModProdRemAssocButton" layoutX="618.0" layoutY="434.0" mnemonicParsing="false" onAction="#OnModProdRemovePartButtonClicked" text="Remove Associated Part" />
+            <Button fx:id="ModProdAddPartButton" layoutX="633.0" layoutY="230.0" mnemonicParsing="false" onAction="#OnModProdAddPartButtonClicked" text="Add Part" />
+            <Label layoutX="15.0" layoutY="16.0" text="Modify Product">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font></Label>
+            <Label layoutX="43.0" layoutY="127.0" text="ID">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="41.0" layoutY="191.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="40.0" layoutY="246.0" text="Inv">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="44.0" layoutY="303.0" text="Price">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="46.0" layoutY="360.0" text="Max">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <Label layoutX="253.0" layoutY="369.0" text="Min">
+               <font>
+                  <Font size="14.0" />
+               </font></Label>
+            <TextField fx:id="ModProdIDField" layoutX="98.0" layoutY="124.0" />
+            <TextField fx:id="ModProdNameField" layoutX="98.0" layoutY="188.0" />
+            <TextField fx:id="ModProdInvField" layoutX="98.0" layoutY="243.0" />
+            <TextField fx:id="ModProdPriceField" layoutX="98.0" layoutY="300.0" />
+            <TextField fx:id="ModProdMaxField" layoutX="98.0" layoutY="357.0" prefHeight="25.0" prefWidth="118.0" />
+            <TextField fx:id="ModProdMinField" layoutX="289.0" layoutY="366.0" prefHeight="25.0" prefWidth="118.0" />
+            <TableView fx:id="ModProdTopTable" layoutX="502.0" layoutY="53.0" prefHeight="160.0" prefWidth="460.0">
+              <columns>
+                <TableColumn fx:id="ModProdIDCol1" prefWidth="75.0" text="Part ID#" />
+                <TableColumn fx:id="ModProdNameCol1" prefWidth="212.0" text="Part Name" />
+                  <TableColumn fx:id="ModProdInvCol1" prefWidth="79.0" text="Inv Quantity" />
+                  <TableColumn fx:id="ModProdPriceCol1" prefWidth="92.0" text="Price Per Unit" />
+              </columns>
+            </TableView>
+            <TableView fx:id="ModProdAssocTable" layoutX="502.0" layoutY="269.0" prefHeight="160.0" prefWidth="460.0">
+              <columns>
+                <TableColumn fx:id="ModProdIDCol2" prefWidth="75.0" text="Part ID#" />
+                <TableColumn fx:id="ModProdNameCol2" prefWidth="213.0" text="Part Name" />
+                  <TableColumn fx:id="ModProdInvCol2" prefWidth="83.0" text="Inv Quantity" />
+                  <TableColumn fx:id="ModProdPriceCol2" prefWidth="87.0" text="Price Per Unit" />
+              </columns>
+            </TableView>
+            <TextField fx:id="ModProdSearchField" layoutX="754.0" layoutY="14.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="512.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="proj.test.ModPartController">
+   <children>
+      <Button fx:id="ModPartCancelButton" layoutX="433.0" layoutY="453.0" mnemonicParsing="false" onMouseClicked="#OnModPartCancelButtonClicked" text="Cancel">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="ModPartSaveButton" layoutX="355.0" layoutY="453.0" mnemonicParsing="false" onAction="#OnModPartSaveButtonClicked" text="Save">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <RadioButton fx:id="MPOutsourcedRadio" layoutX="309.0" layoutY="64.0" mnemonicParsing="false" onAction="#radioToggleFunction" text="Outsourced">
+         <font>
+            <Font size="13.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="radioToggle" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="MPInHouseRadio" layoutX="201.0" layoutY="64.0" mnemonicParsing="false" onAction="#radioToggleFunction" selected="true" text="In-House" toggleGroup="$radioToggle">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="MPIDField" editable="false" layoutX="115.0" layoutY="131.0" style="-fx-background-color: dddddd;" />
+      <TextField fx:id="MPNameField" layoutX="115.0" layoutY="182.0" />
+      <TextField fx:id="MPInvField" layoutX="115.0" layoutY="238.0" />
+      <TextField fx:id="MPPriceField" layoutX="115.0" layoutY="292.0" />
+      <TextField fx:id="MPMaxField" layoutX="115.0" layoutY="342.0" />
+      <TextField fx:id="MPFlexField" layoutX="159.0" layoutY="393.0" />
+      <TextField fx:id="MPMinField" layoutX="336.0" layoutY="329.0" />
+      <Label layoutX="24.0" layoutY="24.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="33.0" layoutY="185.0" text="Name">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="37.0" layoutY="134.0" text="ID">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="34.0" layoutY="240.0" text="Inv">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="29.0" layoutY="295.0" text="Price">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="344.0" text="Max">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="MPFlexLabel" layoutX="28.0" layoutY="395.0" text="Machine ID">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="297.0" layoutY="332.0" text="Min">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+   </children>
+</AnchorPane>
